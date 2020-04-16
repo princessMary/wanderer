@@ -1848,9 +1848,7 @@ function instances(showall) {
 	   }
 
 
-	//	for (var i=0; i < 5; i+=1) {
 		for (i in indeksit) {
-		// for (var i=0; i < Word.instances.length; i+=1) {
 			if (showall==false && i==snippetlimit) {
 				thereismore = true;
 				break;
@@ -1859,30 +1857,11 @@ function instances(showall) {
 			var w1  = Math.floor(Words[ wordmap[active[0]] ].width/2);
 			var w0  = Math.floor(1000-w1)/2;
 
-		//	var insert = "<div class='left' style='width:"+w0+"px;'><span class='ellipsis'>…</span>";
 			var insert = "<div class='left' style='width:"+w0+"px;'><span class='ellipsis'>…</span>";
 
-			// for (var j=0; j < Word.instances[i].length; j+=1) {
-				// active word in the middle
-				// if (Word.instances[i][j]==null) {
-
-					// insert += "</div><div class='middle' style='width:"+w1+"px;'><span class='w_"+Word.index+"'>" + Word.word + "</span></div>";
-
-					// insert += "</div><div class='left' style='width:"+w1+"px;'><span class='w_'>" + Word.word + "</span></div>";
-					// insert += "</div><div class='left' style='width:"+w1+"px;'><span class='w_'>" + indeksit[i] + "</span></div>";
 					insert += "</div><div class='left' style='width:"+w1+"px;'><b><span class='w_'>" + my_data[indeksit[i]]["courseName"] + "</span></b></div>";
 
 					insert += "</div><div class='left' style='width:"+w1+"px;'><span class='w_'>"+  my_data[indeksit[i]]["description"] +"</span></div>";
-//my_data[i]["courseName"]
-
-					// insert += "<div class='right' style='width:"+w0+"px;'>";
-
-				// }
-				// else {
-				// 	var Word2 = Words[Word.instances[i][j]];
-				// 	insert += "<span class='w_"+Word2.index+"'>" + Word2.word + "</span>";
-				// }
-			// }
 
 			insert += "<span class='ellipsis'> </span></div>"
 
@@ -1891,8 +1870,6 @@ function instances(showall) {
 
 		// load more
 		if (thereismore) instancesInsert += "<div id='showall'><span>Show all "+indeksit.length+" instances of this word</span></div>";
-	//	if (thereismore) instancesInsert += "<div id='showall'><span>Show all "+Word.instances.length+" instances of this word</span></div>";
-
 	}
 	// comparison
 	else if (active.length==2) {
@@ -1938,7 +1915,7 @@ function instances(showall) {
 	 	}
 
 	 	// load more
-	 	if (thereismore) instancesInsert += "<div id='showall'><span>Show all "+indeksit.length+" instances of this word</span></div>";
+	 	if (thereismore) instancesInsert += "<div id='showall'><span>Show all "+indeksit.length+" courses</span></div>";
 
 
 	}
